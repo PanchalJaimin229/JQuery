@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+
+    <style>
+        /* body div {
+            margin: 10px 10px;
+        } */
+
+        .ii1 {
+
+            display: none;
+        }
+
+        .ii2 {
+            background: url(1.jpg);
+            background-size: 100% 100%;
+        }
+
+        .ii3 {
+            background: url(2.jpg);
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="height: 150px; width: 150px; border: 2px solid;">
+        <img src="1.jpg" alt="no img" height="150px" width="150px" id="i1" class="ii1">
+    </div>
+
+    <div style="height: 150px; width: 150px; border: 2px solid;">
+        <img src="2.jpg" alt="no img" height="150px" width="150px" id="i2" class="ii2">
+    </div>
+
+    <div style="height: 150px; width: 150px; border: 2px solid;">
+        <img src="3.jpg" alt="no img" height="150px" width="150px" id="i3" class="ii3">
+    </div>
+
+    <button id="get">GET</button>
+    <button id="chang">CHANGE</button>
+    <button id="chang1">1to2 and 2to1</button>
+
+
+
+    <script>
+
+        $("#get").click(function () {
+            $("#i1").removeClass("ii1");
+        });
+
+        $("#chang").click(function () {
+            $("#i2").attr('src', '1.jpg');
+        });
+
+        var m = false;
+
+        $("#chang1").click(function () {
+
+            if (!m) {
+                $("#i3").attr('src', '3.jpg');
+            } else {
+                $("#i3").attr('src', '1.jpg');
+            }
+         m = !m
+           
+        });
+    </script>
+
+</body>
+
+</html>
